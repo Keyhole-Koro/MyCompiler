@@ -1,0 +1,38 @@
+name: mycompiler
+version: 0.1.0.0
+dependencies:
+  - base >= 4.7 && < 5
+  - array  
+  - tasty
+  - tasty-hunit
+  - tasty-quickcheck
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - CodeGen
+    - Parser
+    - Lexer
+  build-tools:
+    - alex
+    - happy
+  hs-source-dirs: src
+  default-extensions: []
+
+executables:
+  mycompiler:
+    main: Main.hs
+    source-dirs: src
+    build-tools:
+      - alex
+      - happy
+    dependencies:
+      - mycompiler
+
+tests:
+  test:
+    main: LexerTest.hs
+    source-dirs: test
+    dependencies:
+      - mycompiler
+

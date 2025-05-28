@@ -1,0 +1,7 @@
+resolver: lts-21.25  # Or latest available LTS with GHC 9.4.x
+
+packages:
+  - .
+
+extra-deps:
+  - alex-3.5.1.0
