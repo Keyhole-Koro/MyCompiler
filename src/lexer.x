@@ -15,6 +15,7 @@ $white+                      ;
 "int"                        { \_ -> TokenInt }
 "return"                     { \_ -> TokenReturn }
 $alpha $alphanum*            { \s -> TokenIdent s }
+","                          { \_ -> TokenComma }
 ";"                          { \_ -> TokenSemi }
 "="                          { \_ -> TokenAssign }
 "+"                          { \_ -> TokenPlus }
@@ -37,6 +38,8 @@ data Token
   | TokenRParen
   | TokenLBrace
   | TokenRBrace
+  | TokenComma
+
   deriving (Show, Eq)
 
 lexer :: String -> [Token]

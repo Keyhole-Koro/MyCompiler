@@ -1,16 +1,16 @@
 ? C:\Users\Keyhole\AppData\Local\Programs\stack\x86_64-windows\ghc-9.4.8\lib\x86_64-windows-ghc-9.4.8\rts-1.0.2\include\ghcversion.h
 : hash: 4bc88722407a89d1efbfa9c116cd4017af6ea3ff746643032b96cef62782f5dd
 C:\Users\Keyhole\Documents\MyCompiler\.stack-work\dist\f1a1ac53\build\mycompiler\autogen\Paths_mycompiler.hs:
-  hash: 978a3a65cf7c3c1ed23fe3a408753f6d1622b0adaf7521030efdfc32db60b0d1
+  hash: a41c54310098bd7040f9c0aede7eb2c3de98d3b9b148a68c2c07f24581432540
 C:\Users\Keyhole\Documents\MyCompiler\.stack-work\dist\f1a1ac53\build\mycompiler\autogen\cabal_macros.h:
-  hash: 4605bc6ba2f0c3c824fcfc00a3f5e595f8e086b3513fe23df381b416ed44c412
+  hash: dbf38fd621a6c34f918a6ca845ab7487e804d2b60f2e9960750a0edaef951200
 C:\Users\Keyhole\Documents\MyCompiler\mycompiler.cabal:
-  hash: 52787b6ddcd436263a57fbec3acd65046fb1a182dce770780b1b2a6519b4088f
+  hash: 04988f5482647f53d24d74f94902aa6e9ac7259fcc4a4224a8106c6619c27241
 C:\Users\Keyhole\Documents\MyCompiler\package.yaml:
-  hash: 9b8b4f37f880d0aee461fa8e5e835f74754eb25a9b9bca6d5de36fb43f968fd3
+  hash: 7ff82ed6618abd6b79029101bcee3ad82b825416da6c44ea6b7df74d4ddfabe8
 C:\Users\Keyhole\Documents\MyCompiler\src\CodeGen.hs:
-  hash: b80d57ecf71c177c09f686ed0e645f43968a673b42cedaf82809a52cb15eadc1
+  hash: ef4ea3e590ac8c548ab21939c37a9656429c623d7ff6a0fe71b8be37715c570c
 C:\Users\Keyhole\Documents\MyCompiler\src\Main.hs:
-  hash: 8ba971948416ef11b3975a25f49e5a2ff30866c72f5f956494fcfc49a752f5d1
+  hash: b2f91a9b66b177200c9797cc2cb8ebe4723d28b3a99af44211ffc426b447667f
 C:\Users\Keyhole\Documents\MyCompiler\src\Parser.y:
-  hash: d6015b0482ac7f4ba75968fdd7071474913ccc0281dc829003dce6b5a9d481a6
+  hash: 893b1ea6f95348592c310978e668f1eaa09926361bcf71e5842cbe2990777f1f

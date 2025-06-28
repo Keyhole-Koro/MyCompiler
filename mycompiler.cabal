@@ -14,6 +14,7 @@ library
       Parser
       Lexer
   other-modules:
+      Main
       Paths_mycompiler
   hs-source-dirs:
       src
@@ -23,6 +24,7 @@ library
   build-depends:
       array
     , base >=4.7 && <5
+    , containers
     , tasty
     , tasty-hunit
     , tasty-quickcheck
@@ -42,6 +44,7 @@ executable mycompiler
   build-depends:
       array
     , base >=4.7 && <5
+    , containers
     , mycompiler
     , tasty
     , tasty-hunit
@@ -58,6 +61,7 @@ test-suite test
   build-depends:
       array
     , base >=4.7 && <5
+    , containers
     , mycompiler
     , tasty
     , tasty-hunit
