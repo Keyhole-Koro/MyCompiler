@@ -14,6 +14,7 @@ import Lexer
   intlit    { TokenIntLit $$ }
   '='       { TokenAssign }
   '+'       { TokenPlus }
+  '-'       { TokenHyphen }
   ';'       { TokenSemi }
   ','       { TokenComma }
   '('       { TokenLParen }
@@ -23,13 +24,13 @@ import Lexer
 
 %%                             -- ← don’t remove this separator!
 
-Program   : FunList                       { Program $1 } 
+Program   : FunList              { Program $1 }
 
 FunList   : Function                      { [$1] }
           | Function FunList              { $1 : $2 }
 
 -- ---------- function definition ----------
-Function  : int ident '(' ParamsOpt ')'       -- ★ param list
+Function  : int ident '(' ParamsOpt ')'
             '{' Stmts '}'                     { Function $2 $4 $7 }
 
 ParamsOpt :                                    { [] }
@@ -44,15 +45,18 @@ Stmts     :                                   { [] }
 
 Stmt      : return Expr ';'                   { Return $2 }
           | VarDef ';'                        { $1 }
-          | Expr  ';'                         { ExprStmt $1 }   -- ★ call as stmt
+          | VarAssign ';'                     { $1 }
+          | Expr  ';'                         { ExprStmt $1 }
 
 VarDef    : int ident '=' Expr                { DefVar $2 $4 }
+VarAssign : ident '=' Expr                    { AssignVar $1 $3 }
 
 -- ---------- expressions ----------
 Expr      : intlit                            { IntLit $1 }
-          | ident '(' ArgsOpt ')'             { Call $1 $3 }    -- ★ call w/ args
+          | ident '(' ArgsOpt ')'             { Call $1 $3 }
           | ident                             { Var $1 }
           | Expr '+' Expr                     { Add $1 $3 }
+          | Expr '-' Expr                     { Sub $1 $3 }
 
 ArgsOpt   :                                   { [] }
           | ArgList                           { $1 }
@@ -67,11 +71,14 @@ data AST
   = Program [AST]
   | Function String [String] [AST]
   | DefVar   String AST
+  | AssignVar String AST
   | Return   AST
   | ExprStmt AST
+  | Assign   String AST
   | IntLit   Int
   | Var      String
   | Add      AST AST
+  | Sub      AST AST
   | Call     String [AST]
   deriving (Show)
 

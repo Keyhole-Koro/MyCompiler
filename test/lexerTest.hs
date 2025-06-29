@@ -5,7 +5,7 @@ import Test.Tasty.HUnit
 
 import Parser        (parse)
 import CodeGen       (codeGen)
-import Lexer         (alexScanTokens)
+import Lexer         (lexer)
 
 main :: IO ()
 main = defaultMain tests
@@ -13,7 +13,7 @@ main = defaultMain tests
 tests :: TestTree
 tests = testCase "Compile sample.my\n" $ do
   src   <- readFile "test/inputs/expr.m"
-  let ast  = parse (alexScanTokens src)
+  let ast  = parse (lexer src)
       code = codeGen ast
 
   putStrLn code

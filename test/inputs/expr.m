@@ -5,5 +5,5 @@ int add(int a, int b) {
 int main() {
     int x = 9;
     int y = add(x, 1);
-    return y;
+    return 0;
 }

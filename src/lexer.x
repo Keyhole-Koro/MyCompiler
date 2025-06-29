@@ -19,6 +19,7 @@ $alpha $alphanum*            { \s -> TokenIdent s }
 ";"                          { \_ -> TokenSemi }
 "="                          { \_ -> TokenAssign }
 "+"                          { \_ -> TokenPlus }
+"-"                          { \_ -> TokenHyphen }
 "("                          { \_ -> TokenLParen }
 ")"                          { \_ -> TokenRParen }
 "{"                          { \_ -> TokenLBrace }
@@ -33,6 +34,7 @@ data Token
   | TokenIntLit Int
   | TokenAssign
   | TokenPlus
+  | TokenHyphen
   | TokenSemi
   | TokenLParen
   | TokenRParen
